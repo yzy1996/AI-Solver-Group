@@ -1,28 +1,17 @@
 ---
-title: Example Event
+title: 2024大模型时代下学习优化新范式研讨会
+event: workshop
+event_url: 
 
-event: Wowchemy Conference
-event_url: https://example.org
+location: 深圳
 
-location: Wowchemy HQ
-address:
-  street: 450 Serra Mall
-  city: Stanford
-  region: CA
-  postcode: '94305'
-  country: United States
-
-summary: An example event.
-abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellusac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam.'
+summary: 诺亚方舟实验室.
+abstract: '优化技术是工业领域各类产品和方案应用最为广泛的基础技术。工业优化问题大多数为NP难问题，长期面临着问题抽象、算法设计和算法调优等耗费人力和时间成本的问题。随着人工智能与大模型技术的飞速发展，学习优化领域研究如何运用AI技术为解决优化问题带来了新的机遇。'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2030-06-01T13:00:00Z'
-date_end: '2030-06-01T15:00:00Z'
+date: '2024-12-02'
 all_day: false
-
-# Schedule page publish date (NOT talk date).
-publishDate: '2017-01-01T00:00:00Z'
 
 authors: []
 tags: []
@@ -54,10 +43,3 @@ slides:
 projects:
 ---
 
-Slides can be added in a few ways:
-
-- **Create** slides using Wowchemy's [_Slides_](https://docs.hugoblox.com/managing-content/#create-slides) feature and link using `slides` parameter in the front matter of the talk file
-- **Upload** an existing slide deck to `static/` and link using `url_slides` parameter in the front matter of the talk file
-- **Embed** your slides (e.g. Google Slides) or presentation video on this page using [shortcodes](https://docs.hugoblox.com/writing-markdown-latex/).
-
-Further event details, including page elements such as image galleries, can be added to the body of this page.
