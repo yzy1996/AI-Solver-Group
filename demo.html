@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>算法发现团队 - 核心技术架构</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .architecture-container {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .core-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 40px;
+            color: white;
+            font-size: 1.3em;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(238, 90, 82, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .app-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            transform: translateY(0);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+            opacity: 0;
+        }
+        
+        .app-card:hover::before {
+            animation: shimmer 1.5s ease-in-out;
+        }
+        
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+            50% { opacity: 1; }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+        }
+        
+        .app-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .app-card h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-card p {
+            opacity: 0.9;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .connection-lines {
+            position: relative;
+            height: 100px;
+            margin: 20px 0;
+        }
+        
+        .line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #667eea);
+            top: 50%;
+            transform-origin: left center;
+            animation: drawLine 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes drawLine {
+            0% { width: 0; opacity: 0; }
+            100% { width: 100%; opacity: 1; }
+        }
+        
+        .tech-stack {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .tech-stack h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .tech-tag {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+        
+        .visual-flow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .flow-arrow {
+            font-size: 2em;
+            color: #667eea;
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>算法发现团队</h1>
+            <p>以核心算法驱动多领域创新应用</p>
+        </div>
+        
+        <div class="architecture-container">
+            <div class="core-circle">
+                算法发现<br>核心引擎
+            </div>
+            
+            <div class="visual-flow">
+                <div class="flow-arrow">↓</div>
+                <div class="flow-arrow">↙</div>
+                <div class="flow-arrow">↘</div>
+            </div>
+            
+            <div class="applications-grid">
+                <div class="app-card">
+                    <h3>🔬 AI4EDA</h3>
+                    <p>电子设计自动化领域的AI算法应用，优化芯片设计流程，提升设计效率和质量</p>
+                </div>
+                
+                <div class="app-card">
+                    <h3>⚡ AI求解器</h3>
+                    <p>高性能优化求解器，解决复杂约束优化问题，支持大规模工程计算</p>
+                </div>
+                
+                <div class="app-card">
+                    <h3>🚀 大模型推理加速</h3>
+                    <p>深度学习模型推理优化，提升模型部署效率，降低计算成本</p>
+                </div>
+                
+                <div class="app-card">
+                    <h3>🏢 ToB行业应用</h3>
+                    <p>面向企业的行业解决方案，将核心算法技术转化为商业价值</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-stack">
+            <h2>核心技术栈</h2>
+            <div class="tech-tags">
+                <span class="tech-tag">机器学习</span>
+                <span class="tech-tag">深度学习</span>
+                <span class="tech-tag">优化算法</span>
+                <span class="tech-tag">并行计算</span>
+                <span class="tech-tag">图神经网络</span>
+                <span class="tech-tag">强化学习</span>
+                <span class="tech-tag">自动微分</span>
+                <span class="tech-tag">模型压缩</span>
+                <span class="tech-tag">算法自动发现</span>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 添加交互动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.app-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
