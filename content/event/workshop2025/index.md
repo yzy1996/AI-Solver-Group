@@ -1,20 +1,17 @@
 ---
-title: 2024大模型时代下学习优化新范式研讨会
+title: 大模型时代的学习优化：从算法革新到千行百业
 event: workshop
 event_url: 
 
-location: 深圳
+location: 北京·中关村黄大年茶思屋
 
 summary: 诺亚方舟实验室.
 abstract: '优化技术是工业领域各类产品和方案应用最为广泛的基础技术。工业优化问题大多数为NP难问题，长期面临着问题抽象、算法设计和算法调优等耗费人力和时间成本的问题。随着人工智能与大模型技术的飞速发展，学习优化领域研究如何运用AI技术为解决优化问题带来了新的机遇。'
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: '2024-12-02'
+date: '2025-09-25'
 all_day: false
-
-authors: []
-tags: []
 
 # Is this a featured talk? (true/false)
 featured: false

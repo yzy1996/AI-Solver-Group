@@ -48,7 +48,7 @@ sections:
 
   - block: collection
     content:
-      title: Latest News
+      title: 新闻
       subtitle:
       text:
       count: 5
@@ -75,18 +75,15 @@ sections:
   #     view: "card"
   #     columns: "1"
 
-
-
-
   - block: collection
     content:
-      title: Latest Preprints
+      title: 最近发表
       text: ""
       count: 5
       filters:
         folders:
           - publication
-        publication_type: 'article'
+        publication_type: 'paper-conference'
     design:
       view: citation
       columns: '1'
