@@ -1,49 +1,69 @@
 ---
 # Leave the homepage title empty to use the site title
-title:
+title: 
 date: 2025-05-29
 type: landing
 
 sections:
-  - block: hero
-    content:
-      title: 
-      image:
-        filename: welcome.jpg
-      text: |
-        <br>
+  # - block: hero
+  #   content:
+  #     title: 
+  #     image:
+  #       filename: welcome.jpg
+  #     text: |
+  #       <br>
         
-        专注于算法自动发现和优化，为AI4EDA、求解器、大模型推理加速和行业应用提供核心技术支撑
+  #       专注于算法自动发现和优化，为AI4EDA、求解器、大模型推理加速和行业应用提供核心技术支撑
+
+  - block: markdown
+    id: hero
+    content:
+      title: "<span style='color: white;'>华为·诺亚方舟实验室·AI应用创新实验室</span>"
+      subtitle: "<span style='color: white;'>专注于算法自动发现和优化，为AI4EDA、求解器、大模型推理加速和行业应用提供核心技术支撑</span>"
+      text: 
+    design:
+      background:
+        image:
+          filename: background.jpg
+          filters:
+            brightness: 0.8
+
+  - block: features
+    content:
+      title: "主要研究方向"
+      items:
+        - name: "大模型推理加速"
+          description: "提升模型吞吐和降低部署成本"
+          icon: "bolt"
+        - name: "自动算法设计"
+          description: "结合大型语言模型（LLMs）和进化计算（EC），实现高效的算法自动启发式设计（AHD）"
+          icon: "heart"
+        - name: "ToB产业赋能"
+          description: "为大模型在多个行业应用落地提供核心技术支撑"
+          icon: "building"
+    design:
+      columns: "3"
+      background:
+        color: "gray-20"
+
+
 
   - block: markdown
     content:
-      title: 
-      text: |
-        <div style="background:rgba(255,255,255,0.95);border-radius:20px;padding:40px;margin-bottom:30px;box-shadow:0 20px 40px rgba(0,0,0,0.1);">
-          <div style="width:200px;height:200px;border-radius:50%;background:linear-gradient(45deg,#ff6b6b,#ee5a52);display:flex;align-items:center;justify-content:center;margin:0 auto 40px;color:white;font-size:1.3em;font-weight:bold;text-align:center;box-shadow:0 10px 30px rgba(238,90,82,0.4);">
-            算法发现<br>核心引擎
-          </div>
-          <div style="display:flex;justify-content:center;gap:20px;margin:40px 0;">
-            <span style="font-size:2em;color:#667eea;">↓</span>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:30px;">
-            <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:15px;padding:10px;color:white;text-align:center;grid-column:1;grid-row:1;">
-              <h3 style="color:white;">🔬 AI4EDA</h3>
-              <p>电子设计自动化领域的AI算法应用，优化芯片设计流程，提升设计效率和质量</p>
+      title: 主要研究方向
+        <div class="research-modules">
+            <div class="module">
+                <h3><a href="/research/ai">人工智能</a></h3>
+                <p>研究机器学习和深度学习的应用。</p>
             </div>
-            <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:15px;padding:10px;color:white;text-align:center;grid-column:2;grid-row:1;">
-              <h3 style="color:white;">⚡ AI求解器</h3>
-              <p>高性能优化求解器，解决复杂约束优化问题，支持大规模工程计算</p>
+            <div class="module">
+                <h3><a href="/research/biotech">生物技术</a></h3>
+                <p>探索基因编辑和合成生物学的潜力。</p>
             </div>
-            <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:15px;padding:10px;color:white;text-align:center;grid-column:1;grid-row:2;">
-              <h3 style="color:white;">🚀 大模型推理加速</h3>
-              <p>深度学习模型推理优化，提升模型部署效率，降低计算成本</p>
+            <div class="module">
+                <h3><a href="/research/sustainability">可持续发展</a></h3>
+                <p>开发环保技术，推动可持续发展。</p>
             </div>
-            <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:15px;padding:10px;color:white;text-align:center;grid-column:2;grid-row:2;">
-              <h3 style="color:white;">🏢 ToB行业应用</h3>
-              <p>面向企业的行业解决方案，将核心算法技术转化为商业价值</p>
-            </div>
-          </div>
         </div>
 
   - block: collection
@@ -64,6 +84,18 @@ sections:
     design:
       view: card
       columns: '1'
+
+  # - block: collection
+  #   content:
+  #     title: "Recent Posts"
+  #     subtitle: "Latest updates from our blog"
+  #     text: "Stay up to date with our latest news and insights"
+  #     count: 3
+  #   design:
+  #     view: "card"
+  #     columns: "1"
+
+
 
 
   - block: collection
