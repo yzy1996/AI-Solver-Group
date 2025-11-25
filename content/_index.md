@@ -46,26 +46,6 @@ sections:
       background:
         color: "gray-20"
 
-
-
-  - block: markdown
-    content:
-      title: 主要研究方向
-        <div class="research-modules">
-            <div class="module">
-                <h3><a href="/research/ai">人工智能</a></h3>
-                <p>研究机器学习和深度学习的应用。</p>
-            </div>
-            <div class="module">
-                <h3><a href="/research/biotech">生物技术</a></h3>
-                <p>探索基因编辑和合成生物学的潜力。</p>
-            </div>
-            <div class="module">
-                <h3><a href="/research/sustainability">可持续发展</a></h3>
-                <p>开发环保技术，推动可持续发展。</p>
-            </div>
-        </div>
-
   - block: collection
     content:
       title: Latest News
